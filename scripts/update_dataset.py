@@ -47,7 +47,7 @@ def generate_random_string(length=8, random_seed=42):
     return "".join(random.choice(letters) for i in range(length))
 
 
-def upload_files_to_r2(directory_path, dotenv, random_seed=42):
+def upload_files_to_r2(directory_path, dotenv, force, random_seed=42):
     # Load environment variables from .env file
     if not load_dotenv(dotenv):
         raise ValueError("Could not load environment variables from .env file.")
@@ -106,14 +106,18 @@ def upload_files_to_r2(directory_path, dotenv, random_seed=42):
         })
         for fastq in [sample["R1_PATH"], sample["R2_PATH"]]:
             key = os.path.basename(fastq)
-            try:
-                # Check if file already exists
-                #s3.head_object(Bucket=bucket_name, Key=key)
-                logging.info("File %s already exists in bucket, skipping...", key)
-            except s3.exceptions.ClientError:
-                # File doesn't exist, upload it
-                #s3.upload_file(fastq, bucket_name, key)
+            if force:
+                s3.upload_file(fastq, bucket_name, key)
                 logging.info("Successfully uploaded %s", key)
+            else:
+                try:
+                    # Check if file already exists
+                    s3.head_object(Bucket=bucket_name, Key=key)
+                    logging.info("File %s already exists in bucket, skipping...", key)
+                except s3.exceptions.ClientError:
+                    # File doesn't exist, upload it
+                    s3.upload_file(fastq, bucket_name, key)
+                    logging.info("Successfully uploaded %s", key)
 
     random_filename = (
         f"answer_sheet_{generate_random_string(random_seed=random_seed)}.csv"
@@ -121,10 +125,10 @@ def upload_files_to_r2(directory_path, dotenv, random_seed=42):
     # Read answer sheet and get out list of included species 
     species_list = list(set(row['SPECIES'] for row in answer_sheet))    
     # Upload answer_sheet.csv with random filename
-    # s3.upload_file(answer_sheet_path, bucket_name, random_filename)
+    s3.upload_file(answer_sheet_path, bucket_name, random_filename)
     file_details['answer_sheet'] = { 'filename': random_filename, 'url': f'{public_url}/{random_filename}', 'species': species_list }
     # upload sample_sheet.csv
-    # s3.upload_file(sample_sheet_path, bucket_name, "sample_sheet.csv")
+    s3.upload_file(sample_sheet_path, bucket_name, "sample_sheet.csv")
     file_details['sample_sheet'] = { 'filename': 'sample_sheet.csv', 'url': f'{public_url}/sample_sheet.csv' }
     # Write details to JSON file
     with open("public/file_details.json", "w", encoding="utf-8") as json_file:
@@ -148,6 +152,8 @@ if __name__ == "__main__":
         "--dotenv", type=str, help="dotenv file", default=".r3_config.env"
     )
     parser.add_argument("--random_seed", type=int, help="random seed", default=42)
+    parser.add_argument("--verbose", action="store_true", help="verbose logging")
+    parser.add_argument("--force", action="store_true", help="overwrite remote files")
     args = parser.parse_args()
 
-    upload_files_to_r2(args.path, args.dotenv, args.random_seed)
+    upload_files_to_r2(args.path, args.dotenv, args.force, args.random_seed)
