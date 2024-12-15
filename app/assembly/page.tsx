@@ -34,7 +34,7 @@ const AssemblyPage = () => {
         <div className="flex flex-col items-center max-w-[800px] mx-auto">
             <h1><em>De novo</em> genome assembly puzzle</h1>
             {loading ? (
-                <div><p>The today's genome puzzle is loading...</p></div>
+                <div><p>The today&apos;s genome puzzle is loading...</p></div>
             ) : (
             <div>
                 <p>
@@ -121,7 +121,7 @@ const AssemblyPage = () => {
                 <ul className="list-disc list-inside">
                     <li>Determine the Multilocus Sequence Typing (MLST) sequence type for each genome.</li>
                     <li>Use appropriate tools (e.g., <a href="https://github.com/tseemann/mlst" target="_blank" rel="noopener noreferrer">MLST</a>, <a href="https://pubmlst.org/" target="_blank" rel="noopener noreferrer">pubMLST</a>) and the relevant MLST scheme for <em>{speciesList.join(', ')}</em>.</li>
-                    <li>Provide the MLST sequence type. It will be a number such "ST10" or "ST100". You do not need to provide the allele profile in your answers.</li>
+                    <li>Provide the MLST sequence type. It will be a number such &quot;ST10&quot; or &quot;ST100&quot;. You do not need to provide the allele profile in your answers.</li>
                 </ul>
                 <h3>Where to run analyses</h3>
                 <p>
