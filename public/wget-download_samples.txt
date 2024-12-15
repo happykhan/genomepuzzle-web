@@ -1,0 +1,23 @@
+#!/bin/bash
+
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample01_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample01_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample02_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample02_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample03_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample03_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample04_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample04_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample05_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample05_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample06_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample06_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample07_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample07_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample08_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample08_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample09_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample09_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample10_R1.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample10_R2.fastq.gz
+wget https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample_sheet.csv

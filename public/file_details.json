@@ -1,0 +1,65 @@
+{
+    "samples": [
+        {
+            "public_name": "sample01",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample01_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample01_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample02",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample02_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample02_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample03",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample03_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample03_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample04",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample04_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample04_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample05",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample05_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample05_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample06",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample06_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample06_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample07",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample07_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample07_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample08",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample08_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample08_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample09",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample09_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample09_R2.fastq.gz"
+        },
+        {
+            "public_name": "sample10",
+            "R1_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample10_R1.fastq.gz",
+            "R2_URL": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample10_R2.fastq.gz"
+        }
+    ],
+    "answer_sheet": {
+        "filename": "answer_sheet_hbrpoig8.csv",
+        "url": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/answer_sheet_hbrpoig8.csv",
+        "species": [
+            "K. pneumoniae"
+        ]
+    },
+    "sample_sheet": {
+        "filename": "sample_sheet.csv",
+        "url": "https://pub-e661bf7ded744bd79c156d3a4f4323ef.r2.dev/sample_sheet.csv"
+    }
+}
